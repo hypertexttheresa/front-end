@@ -1,0 +1,260 @@
+/*
+======================================================================================================
+
+Theme Name: Linking Europe 2
+Theme URI: http://www.linkingeurope.org
+Author: Theresa Song Loong
+Template: justwrite
+Description: This is a custom design for the Linking Europe website
+Version: 2.0
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: minimalist, pastel colours, responsive-layout
+
+
+
+
+======================================================================================================
+This is part of a child theme.
+
+-- http://codex.wordpress.org/Child_Themes
+
+Thank you!
+
+======================================================================================================
+
+	Some info:
+	-- Deafault fonts used:
+	--- Source Sans Pro:		font-family: 'Source Sans Pro', sans-serif;
+	--- Montserrat:				font-family: 'Montserrat', sans-serif;
+	--- Questrial:				font-family: 'Questrial', sans-serif;
+	--- Arimo:					font-family: 'Arimo', sans-serif;
+	
+	-- Colors:
+	--- Main Gray:		#e1e1e1;
+	--- Main Color:		#be5656
+	--- LE green: 		#6fdec3
+*/
+
+@import url("../justwrite/style.css");
+
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+@font-face {
+    font-family: LeagueGothic;
+    src: url('fonts/leaguegothic-regular-webfont.eot');
+    src: url('fonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/leaguegothic-regular-webfont.woff') format('woff'),
+         url('fonts/leaguegothic-regular-webfont.ttf') format('truetype'),
+         url('fonts/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* --- header -- */
+div.wrap {
+	background-color: #FFF;
+	color:#000;
+	
+}
+.logo-image {
+	max-width: 400px;
+}
+
+.logo .description {
+	display: none;
+}
+
+.header-wrap {
+	height: 150px;
+}
+
+/*--- text styles --*/
+h2.title, .single-template-1 .title, h2.title a, h2, .single-content h1, .single-content h2, .single-content h3, .single-content h4, .single-content h5, .single-content h6 {
+	font-family: LeagueGothic, "Arial Narrow", Helvetica, Arial, sans-serif;
+	letter-spacing: 0;
+}
+
+body {
+	font-family: Helvetica, sans-serif;
+}
+
+
+.menu-main li a{
+	text-transform:lowercase;
+	font-size: 24px;
+	font-family: LeagueGothic, "Arial Narrow", Helvetica, Arial, sans-serif;
+}
+.post-template-1 .details .detail a:hover {
+	color: #6fdec3;
+}
+
+.post-template-1 .title a:hover {
+	text-decoration: none;	
+	color: #6fdec3;
+}
+
+.post-template-1 p, .single-template-1 .single-content {
+	font-size: 14px;
+}
+
+
+/*menu hacks
+.menu-main {
+	float:right;
+}
+
+.search-button, .browse-more, .mobile-menu-button {
+	right: 0;
+	position: relative;
+}
+
+.sub-menu{
+	-webkit-box-shadow: 0 0 ;
+	-moz-box-shadow: 0 0 ;
+	box-shadow: 0 0 ;
+	border 0;
+}
+
+.menu-main li:hover .sub-menu {
+	background-color: none;
+}
+
+.menu-main .sub-menu { 
+	box-shadow: none;
+	line-height: normal; 
+}
+
+.menu-main .sub-menu li { 
+	border: 1px solid black;
+}
+.browse-more.activated, .browse-more:hover {
+	text-decoration: none;	
+	color: #6fdec3;
+}
+
+.menu-main > li > a, .menu-wrap a.search-button, .menu-wrap a.browse-more, body, .comments-number, .comments-number:visited, .post-template-1 p, .single-template-1 .single-content, .post-template-1 .details .detail a, .single-template-1 .details .detail a, .post-template-1 .details .detail a:visited, .back-to-top:hover, .footer-credits .copyright, .post-navigation, .comment-main .vcard .fn,  .menu-wrap .search-field {
+	color: #000;
+}
+*/
+
+
+/* -- 3.1 Main Menu */
+.menu-wrap {
+	width: 100%;
+	height: 70px;
+	border-width: 0;
+	bottom: auto;
+	background: none;
+	position: fixed;
+	margin: auto; 
+	top:0;
+}
+
+.menu-wrap.visible {
+	width: 100%;
+	min-width: 100%;
+	left: 0;
+	right: 0;
+	bottom: auto;
+	position: fixed;
+	top: 0;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	background: #fff;
+	z-index: 9999 !important;
+}
+.menu-wrap ul {
+	list-style: none;	
+}
+.menu-main {
+	position: relative;
+	float: right;
+	list-style: none;
+	height: 100%;
+	font-size: 14px;
+	font-weight: 700;
+	border-right-width: 1px;
+	border-right-style: solid;
+	padding: 0 15px;
+}
+.menu-main a {
+	display: block;
+	padding: 0 20px;
+	line-height: 68px;	
+}
+.menu-main li {
+	position: relative;	
+}
+.menu-main > li {
+	display: block;
+	height: 100%;
+	float: left;
+	text-transform: uppercase;
+}
+.menu-main > li:first-child:before {
+	display: none;	
+}
+.menu-main > li:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -6px;
+	width: 0px;
+	height: 12px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-color: inherit;	
+}
+.menu-main .sf-sub-indicator {
+	display: none;
+}
+.menu-main .sub-menu .sf-sub-indicator {
+	display: inline-block;
+	float: right;
+	font-size: 14px;
+	margin-right: 10px;
+}
+.menu-main .sub-menu {
+	position: absolute;
+	top: -999em;
+	z-index: 99;
+	list-style: none;
+	width: 318px;
+	font-size: 13px;
+	text-transform: none;
+	padding: 0;
+	-webkit-box-shadow: 0;
+	-moz-box-shadow: 0;
+	box-shadow: 0 0 15px  rgba(0,0,0,0.1);
+	border-width: 1px;
+	border-style: solid;
+	margin: 0;
+}
+.menu-main .sub-menu li {
+	padding: 0 20px;	
+}
+.menu-main .sub-menu a {
+	line-height: normal;
+	padding: 0;	
+}
+.menu-main .sub-menu li:last-child a {
+	border: none;	
+}
+.menu-main li:hover .sub-menu {
+	top: 68px;
+	left: 0;
+}
+.menu-main li:hover .sub-menu .sub-menu, .menu-wrap.visible .menu-main li:hover .sub-menu .sub-menu {
+	top: -11px;
+	left: 316px;
+}
+.menu-wrap.visible .menu-main li:hover .sub-menu {
+	top: 69px;	
+}
+
+
